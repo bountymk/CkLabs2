@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const _4laba_1 = require("./4laba");
+const owner1 = new _4laba_1.Transport.OwnerClass("Иванов", "Иван", "Иванович", new Date("1985-05-10"), _4laba_1.Transport.DocType.Passport, "1234", "567890");
+const car1 = new _4laba_1.Transport.VehicleClass("Toyota", "Corolla", 2020, "1HGBH41JXMN109186", "AB123CD", owner1);
+const car2 = new _4laba_1.Transport.CarModel("BMW", "X5", 2022, "1HGBH41JXMN109188", "AB123CD", owner1, _4laba_1.Transport.CarBody.SUV, _4laba_1.Transport.CarClass.Luxury);
+const motorbike1 = new _4laba_1.Transport.MotorbikeModel("Harley-Davidson", "Sportster", 2021, "1HD1BWV155Z123456", "XY123ZY", owner1, _4laba_1.Transport.FrameType.Steel, true);
+car1.displayVehicleInfo();
+car2.displayVehicleInfo();
+motorbike1.displayVehicleInfo();
+const vehicleStorage = new _4laba_1.Transport.VehicleStorageClass();
+vehicleStorage.addVehicle(car1);
+vehicleStorage.addVehicle(car2);
+console.log(vehicleStorage.getAllVehicles());
